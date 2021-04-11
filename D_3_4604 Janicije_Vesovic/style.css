@@ -1,0 +1,32 @@
+body {
+    font-family: Verdana, sans-serif;
+    font-size: 16px;
+}
+
+
+h1, h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h3 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.table1 {
+    width: 1200px;
+}
+.team {
+    width: 200px;
+}
+
+.table2 {
+    width: 800px;
+}
+
+.player {
+    width: 100px;
+}
+
+
+
