@@ -1,0 +1,25 @@
+.lekar1, .lekar2 {
+    background-color: azure;
+    color: rgb(158, 15, 15);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.radnoVreme {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: larger;
+    background-color: burlywood;
+    color: darkslategray;
+    font-weight: bold;
+}
+
+span {
+    display: inline-block;
+    border: 1px solid black;
+    width: 25px;
+    text-align: center;
+}
+
+.crno {
+    background-color: black;
+    color: white;
+}
