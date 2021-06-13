@@ -1,0 +1,63 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+#stanje {
+    margin: 10px;
+    width: 50%;
+    font-size: 24px;
+    font-weight: bold;
+    border: 5px solid brown;
+    border-radius: 15px;
+    background-color: burlywood;
+}
+
+#stanje p {
+    margin: 10px;
+}
+
+#stanje input, label {
+    margin: 10px;
+    font-size: 24px;
+    padding: 5px;
+}
+
+
+form #dugme {
+    position: relative;
+    left: 60%;
+    padding: 5px;
+    background-color:brown;
+    color: wheat;
+    cursor: pointer;
+    border: 2px solid brown;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#tabela table {
+    margin: 50px 10px;
+    border: 5px solid brown;
+    border-collapse: collapse;
+}
+
+#tabela th {
+    font-size: 24px;
+    font-weight: bold;
+    border: 5px solid brown;
+    padding: 5px;
+    text-align: center;
+    width: 33%;
+    background-color: burlywood;
+}
+
+#tabela td {
+    font-size: 24px;
+    border: 5px solid brown;
+    padding: 5px;
+    text-align: center;
+    width: 33%;
+    background-color: burlywood;
+}

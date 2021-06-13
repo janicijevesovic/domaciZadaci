@@ -3,10 +3,10 @@ let formStanje = document.querySelector("#stanje form");
 let inputDeoNaziva = document.querySelector("#deoNaziva");
 let inputMinCena = document.querySelector("#minCena");
 let inputMaxCena = document.querySelector("#maxCena");
-let divLista = document.querySelector("#lista");
+let divTabela = document.querySelector("#tabela");
 
 
-function proveriStanjePromise(resource) {
+let proveriStanjePromise = resource => {
     return new Promise((resolve, reject) => {
         let request = new XMLHttpRequest();
         request.addEventListener('readystatechange', function () {
@@ -35,15 +35,15 @@ let proveriStanje = e => {
     let prviRed = document.createElement('tr');
 
     let prvaKolona = document.createElement('th');
-    prvaKolona.textContent = "Naziv artikla:";
+    prvaKolona.textContent = "Naziv artikla";
     prviRed.appendChild(prvaKolona);
 
     let drugaKolona = document.createElement('th');
-    drugaKolona.textContent = "Stanje u magacinu:";
+    drugaKolona.textContent = "Stanje u magacinu";
     prviRed.appendChild(drugaKolona);
 
     let trecaKolona = document.createElement('th');
-    trecaKolona.textContent = "Cena:";
+    trecaKolona.textContent = "Cena";
     prviRed.appendChild(trecaKolona);
 
     tabelaArtikala.appendChild(prviRed);
@@ -83,7 +83,7 @@ let proveriStanje = e => {
                 }
             });
             // divLista.appendChild(listaArtikala);
-            divLista.appendChild(tabelaArtikala);
+            divTabela.appendChild(tabelaArtikala);
         }).catch(error => {
             console.log(error);
         });
