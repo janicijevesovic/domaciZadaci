@@ -60,7 +60,7 @@ let proveriStanje = e => {
         return proveriStanjePromise("./JSON/prices.json");
         }).then(data => {
             data.forEach(item => {
-                if (itemsInStock.includes(item.id) && item.item.includes(deoNaziva) && minCena < item.price && maxCena > item.price) {
+                if (itemsInStock.includes(item.id) && item.item.toLowerCase().includes(deoNaziva) && minCena < item.price && maxCena > item.price) {
                     // let noviArtikal = document.createElement('li');
                     // noviArtikal.textContent = item.item;
                     // listaArtikala.appendChild(noviArtikal);
@@ -76,7 +76,7 @@ let proveriStanje = e => {
                     noviRed.appendChild(drugaKolona);
 
                     let trecaKolona = document.createElement('td');
-                    trecaKolona.textContent = item.price;
+                    trecaKolona.textContent = item.price.toFixed(2);
                     noviRed.appendChild(trecaKolona);
 
                     tabelaArtikala.appendChild(noviRed);
