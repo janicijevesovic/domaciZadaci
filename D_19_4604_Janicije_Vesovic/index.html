@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19. Domaci</title>
+</head>
+
+<body>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.7/firebase-firestore.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCHU5-wSvTytW_TgxTzZ3c3jjqnba2ikCM",
+            authDomain: "itbootcamp-janicije.firebaseapp.com",
+            projectId: "itbootcamp-janicije",
+            storageBucket: "itbootcamp-janicije.appspot.com",
+            messagingSenderId: "761498667900",
+            appId: "1:761498667900:web:f7fb73ebf5b18f98d8f2f9"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        let database = firebase.firestore();
+    </script>
+
+    <script type="module" src="main.js"></script>
+</body>
+
+</html>
