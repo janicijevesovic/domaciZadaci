@@ -29,4 +29,39 @@ addMovie("movie-03", newMovie);
 
 // Menjanje podataka o nekim filmovima u bazi
 
+// let movie = database.doc('movies/movie-02');
+// movie.update({
+//     "director.name": "Robert"
+// });
+
+let updateMovie = (movieID, property, newValue) => {
+    let movie = database.doc(`movies/${movieID}`);
+    movie.update({
+        property: newValue
+    });
+}
+
+
+// Dodavanje zanra nekom filmu
+
+let addGenre = (movieID, newValue) => {
+    let movie = database.doc(`movies/${movieID}`);
+    movie.update({
+        genres: firebase.firestore.FieldValue.arrayUnion(newValue)
+    });
+}
+
+// addGenre("movie-02", "Drama");
+
+
+// Brisanje zanra nekom filmu
+
+let deleteGenre = (movieID, value) => {
+    let movie = database.doc(`movies/${movieID}`);
+    movie.update({
+        genres: firebase.firestore.FieldValue.arrayRemove(value)
+    })
+}
+
+// deleteGenre("movie-02", "Drama");
 
