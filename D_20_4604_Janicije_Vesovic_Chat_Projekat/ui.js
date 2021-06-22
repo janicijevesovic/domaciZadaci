@@ -24,6 +24,7 @@ export class ChatUI {
             <span class="username">${data.username} : </span>
             <span class="message">${data.message} </span>
             <div>${this.formatDate(date)}</div>
+            <div><img src="trash.png" class="trash"</div>
             </li>
         `;
         }
@@ -34,6 +35,7 @@ export class ChatUI {
             <span class="username">${data.username} : </span>
             <span class="message">${data.message} </span>
             <div>${this.formatDate(date)}</div>
+            <div><img src="trash.png" class="trash"</div>
             </li>
         `;
         }

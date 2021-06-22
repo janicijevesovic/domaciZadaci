@@ -46,6 +46,11 @@ export class Chatroom {
         return response;
     }
 
+    async deleteChat(document) {
+        let response = await this.chats.doc(document).delete();
+        return response;
+    }
+
     getChats(callback) {
         this.unsub = this.chats
             .where('room', '==', this.room)

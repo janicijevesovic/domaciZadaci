@@ -10,6 +10,8 @@ let btnUsername = document.getElementById("btnUsername");
 let navRooms = document.querySelector('nav');
 let outputUsername = document.querySelector('#outputUsername');
 let navLinks = document.querySelectorAll('a');
+let inputUpdateColor = document.getElementById('inputUpdate');
+let btnUpdateColor = document.getElementById('btnUpdate');
 
 
 // Citamo iz lokalne memorije username, ukoliko postoji, u suprotnom default username je anonymous
@@ -31,6 +33,18 @@ let room = () => {
         return "general";
     }
 }
+
+// Citamo iz lokalne memorije color, ukoliko postoji, u suprotnom default color je white
+let color = () => {
+    if (localStorage.color) {
+        return localStorage.color;
+    }
+    else {
+        return "#ffffff";
+    }
+}
+inputUpdateColor.value = color();
+document.body.style.backgroundColor = inputUpdateColor.value;
 
 // Kreiramo objekat klase Chatroom
 
@@ -88,5 +102,24 @@ navRooms.addEventListener('click', e => {
         chatroom2.getChats(data => {
             chatUI1.templateLI(data);
         });
+    }
+});
+
+// 3. Zadatak
+btnUpdateColor.addEventListener('click', () => {
+    setTimeout(() => {
+        document.body.style.backgroundColor = inputUpdateColor.value;
+    }, 500);
+    localStorage.color = inputUpdateColor.value;
+});
+
+
+ulChatList.addEventListener('click', e => {
+    // 2. Zadatak pod b)
+    if (e.target.tagName == "IMG") {
+        let result = confirm("Da li zelite da trajno obrisete poruku?");
+        if (result == true) {
+            e.target.parentElement.parentElement.remove();
+        }
     }
 });
